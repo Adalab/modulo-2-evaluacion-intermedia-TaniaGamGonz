@@ -40,6 +40,7 @@ html {
 }
 .h3 {
   font-size: 3rem;
+  margin-bottom: 10px;
 }
 
 .select {
@@ -73,6 +74,15 @@ html {
   padding: 5px;
   cursor: pointer;
   color: white;
+  transition: all 0.5s;
+}
+section .button {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.button:hover {
+  background-color: var(--navy);
+  color: var(--beige);
 }
 
 .hidden {
