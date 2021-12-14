@@ -8,33 +8,38 @@
     <title>Piedra, papel o tijera</title>
   </head>
   <body>
-    <h1>Juego piedra, papel o tijera</h1>
-    <form action="">
-      <h2>Introduce aquí tu jugada</h2>
-      <select
-        name="playerChoice"
-        id="playerChoice"
-        class="js-playerChoice"
-        required
-      >
-        <option value="default" disabled>Escoge tu jugada</option>
-        <option value="piedra">Piedra</option>
-        <option value="papel">Papel</option>
-        <option value="tijera">Tijera</option>
-      </select>
-      <button type="submit" class="js-startBtn">Jugar</button>
-    </form>
-    <section>
-      <button type="button" class="hidden js-replayBtn">Volver a jugar</button>
-      <h3>Vamos a jugar!</h3>
-      <p class="js-resultado"></p>
-    </section>
-    <section>
-      <h3>Puntos</h3>
-      <p class="js-playerPoints">Jugador:</p>
-      <p class="js-pcPoints">Ordenador:</p>
-    </section>
-
+    <main class="main">
+      <h1 class="h1">Juego piedra, papel o tijera</h1>
+      <form action="" class="form">
+        <h2 class="h2">Introduce aquí tu jugada</h2>
+        <fieldset class="fieldset">
+          <select
+            name="playerChoice"
+            id="playerChoice"
+            class="js-playerChoice select"
+            required
+          >
+            <option value="default" disabled>Escoge tu jugada</option>
+            <option value="piedra">Piedra</option>
+            <option value="papel">Papel</option>
+            <option value="tijera">Tijera</option>
+          </select>
+          <button type="submit" class="button js-startBtn">Jugar</button>
+        </fieldset>
+      </form>
+      <section>
+        <button type="button" class="hidden button js-replayBtn">
+          Volver a jugar
+        </button>
+        <h3 class="h3">Vamos a jugar!</h3>
+        <p class="p js-resultado"></p>
+      </section>
+      <section>
+        <h3 class="h3">Puntos</h3>
+        <p class="p js-playerPoints">Jugador:</p>
+        <p class="p js-pcPoints">Ordenador:</p>
+      </section>
+    </main>
     <script src="./js/main.js"></script>
   </body>
 </html>

@@ -69,8 +69,8 @@ function getRandomNumber(max) {
   }
   function writeResults(){
         result.innerHTML=play(getPlayerChoice(),getPcChoice())
-        document.querySelector('.js-playerPoints').innerHTML=`Jugador:${playerCounter}`;
-        document.querySelector('.js-pcPoints').innerHTML=`Ordenador:${pcCounter}`;    
+        document.querySelector('.js-playerPoints').innerHTML=`Jugador: ${playerCounter}`;
+        document.querySelector('.js-pcPoints').innerHTML=`Ordenador: ${pcCounter}`;    
   }
 
   function disableGame(){  if(games > 10){

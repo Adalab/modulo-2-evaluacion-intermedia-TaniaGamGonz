@@ -1,3 +1,80 @@
+/*Variables*/
+:root {
+  --main-color: #fbf4f9;
+  --pink: #f6e5f5;
+  --blue: #b9cced;
+  --beige: #f6e7e6;
+  --navy: #5584ac;
+}
+/*Little reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+
+/*Styles*/
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--main-color);
+}
+.h1,
+.h2,
+.h3 {
+  color: var(--navy);
+}
+.h1 {
+  font-size: 7rem;
+}
+.h2 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+.h3 {
+  font-size: 3rem;
+}
+
+.select {
+  background-color: var(--pink);
+  border: none;
+  outline: none;
+  font-size: 3rem;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+.fieldset {
+  border: none;
+
+  display: flex;
+  justify-content: space-between;
+}
+.p {
+  font-size: 3rem;
+}
+.fieldset .button {
+  width: 30%;
+}
+.button {
+  border: none;
+  outline: 0;
+  border-radius: 5px;
+  background-color: var(--blue);
+  font-size: 3rem;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  color: white;
+}
+
 .hidden {
   display: none;
 }
