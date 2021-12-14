@@ -4,7 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Piedra, papel o tijera</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Juego piedra, papel o tijera</h1>
+    <form action="">
+      <h2>Introduce aquí tu jugada</h2>
+      <select name="playerChoice" id="playerChoice">
+        <option value="" selected>Escoge tu jugada</option>
+        <option value="piedra">Piedra</option>
+        <option value="papel">Papel</option>
+        <option value="tijera">Tijera</option>
+      </select>
+      <button type="submit">Jugar</button>
+    </form>
+    <section>
+      <h3>Resultado</h3>
+      <p></p>
+    </section>
+    <section>
+      <h3>Contadores</h3>
+      <p>Jugador:</p>
+      <p>Ordenador:</p>
+    </section>
+
+    <script src="./js/main.js"></script>
+  </body>
 </html>
