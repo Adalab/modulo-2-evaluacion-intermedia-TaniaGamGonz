@@ -11,22 +11,28 @@
     <h1>Juego piedra, papel o tijera</h1>
     <form action="">
       <h2>Introduce aquí tu jugada</h2>
-      <select name="playerChoice" id="playerChoice">
-        <option value="" selected>Escoge tu jugada</option>
+      <select
+        name="playerChoice"
+        id="playerChoice"
+        class="js-playerChoice"
+        required
+      >
+        <option value="default" disabled>Escoge tu jugada</option>
         <option value="piedra">Piedra</option>
         <option value="papel">Papel</option>
         <option value="tijera">Tijera</option>
       </select>
-      <button type="submit">Jugar</button>
+      <button type="submit" class="js-startBtn">Jugar</button>
     </form>
     <section>
-      <h3>Resultado</h3>
-      <p></p>
+      <button type="button" class="hidden js-replayBtn">Volver a jugar</button>
+      <h3>Vamos a jugar!</h3>
+      <p class="js-resultado"></p>
     </section>
     <section>
-      <h3>Contadores</h3>
-      <p>Jugador:</p>
-      <p>Ordenador:</p>
+      <h3>Puntos</h3>
+      <p class="js-playerPoints">Jugador:</p>
+      <p class="js-pcPoints">Ordenador:</p>
     </section>
 
     <script src="./js/main.js"></script>
