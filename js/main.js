@@ -1,11 +1,10 @@
 'use strict'
 
 //Variables
-let playerChoice;
-let pcChoice = '';
 let playerCounter = 0;
 let pcCounter = 0;
 let games = 0;
+const  playerChoice = document.querySelector('.js-playerChoice');
 const startBtn = document.querySelector('.js-startBtn');
 const replayBtn = document.querySelector('.js-replayBtn');
 const result = document.querySelector('.js-resultado');
@@ -21,7 +20,7 @@ function getRandomNumber(max) {
   }
 
   function getPcChoice(){
-      pcChoice = getRandomNumber(99);
+     let pcChoice = getRandomNumber(99);
 
       if(pcChoice < 34){
           pcChoice = 'piedra'
@@ -33,10 +32,10 @@ function getRandomNumber(max) {
       console.log(`El ordenador ha escogido ${pcChoice}.`);
       return pcChoice;
   }
-  function getPlayerChoice(){
-       playerChoice = document.querySelector('.js-playerChoice').value;
-       console.log(`El jugador ha escogido ${playerChoice}`);
-       return playerChoice;
+  function getPlayerChoice(playerChoiceSelected){
+
+       console.log(`El jugador ha escogido ${playerChoiceSelected}`);
+       return playerChoiceSelected;
   }
 
   function play(playerChoice, pcChoice){
@@ -71,7 +70,7 @@ function getRandomNumber(max) {
     }
   }
   function writeResults(){
-        result.innerHTML=play(getPlayerChoice(),getPcChoice())
+        result.innerHTML=play(getPlayerChoice(playerChoice.value),getPcChoice())
         playerPoints.innerHTML=`Jugador: ${playerCounter}`;
         pcPoints.innerHTML=`Ordenador: ${pcCounter}`;    
   }
@@ -93,14 +92,24 @@ function enableGame(){
     startBtn.classList.remove('hidden'); 
 }
 
+function disableStartButton(playerChoice){
+    if(playerChoice){
+        startBtn.disabled = false;
+    }
+}
+
 
   //Listeners and code
-
-
+ 
+  playerChoice.addEventListener('change', (event)=>{
+      console.log(event.target.value);
+      disableStartButton(event.target.value);
+  })
   startBtn.addEventListener('click', (event)=>{
       event.preventDefault();
       writeResults();
       disableGame();
   })
+
 
 

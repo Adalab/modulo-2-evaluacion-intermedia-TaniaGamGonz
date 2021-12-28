@@ -51,6 +51,7 @@ html {
   text-align: center;
   padding: 5px;
   border-radius: 5px;
+  cursor: pointer;
 }
 .fieldset {
   border: none;
@@ -75,6 +76,13 @@ html {
   cursor: pointer;
   color: white;
   transition: all 0.5s;
+}
+.button:disabled {
+  background-color: rgb(180, 176, 176);
+}
+.button:hover:disabled {
+  background-color: rgb(180, 176, 176);
+  color: white;
 }
 section .button {
   padding: 20px;
