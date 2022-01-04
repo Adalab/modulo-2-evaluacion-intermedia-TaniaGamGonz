@@ -7,9 +7,9 @@ let games = 0;
 const  playerChoice = document.querySelector('.js-playerChoice');
 const startBtn = document.querySelector('.js-startBtn');
 const replayBtn = document.querySelector('.js-replayBtn');
-const result = document.querySelector('.js-resultado');
-const playerPoints = document.querySelector('.js-playerPoints');
-const pcPoints = document.querySelector('.js-pcPoints');   
+const resultElement = document.querySelector('.js-resultado');
+const playerPointsElement = document.querySelector('.js-playerPoints');
+const pcPointsElement = document.querySelector('.js-pcPoints');   
 
 
 
@@ -69,10 +69,10 @@ function getRandomNumber(max) {
         return '¡Has perdido!';
     }
   }
-  function writeResults(){
-        result.innerHTML=play(getPlayerChoice(playerChoice.value),getPcChoice())
-        playerPoints.innerHTML=`Jugador: ${playerCounter}`;
-        pcPoints.innerHTML=`Ordenador: ${pcCounter}`;    
+  function writeresults(){
+        resultElement.innerHTML=play(getPlayerChoice(playerChoice.value),getPcChoice())
+        playerPointsElement.innerHTML=`Jugador: ${playerCounter}`;
+        pcPointsElement.innerHTML=`Ordenador: ${pcCounter}`;    
   }
 
   function disableGame(){  if(games > 10){
@@ -85,9 +85,9 @@ function enableGame(){
     games = 0;
     playerCounter = 0;
     pcCounter = 0;
-    playerPoints.innerHTML=`Jugador: ${playerCounter}`;
-    pcPoints.innerHTML=`Ordenador: ${pcCounter}`;  
-    result.innerHTML = '';  
+    playerPointsElement.innerHTML=`Jugador: ${playerCounter}`;
+    pcPointsElement.innerHTML=`Ordenador: ${pcCounter}`;  
+    resultElement.innerHTML = '';  
     replayBtn.classList.add('hidden');
     startBtn.classList.remove('hidden'); 
 }
@@ -107,7 +107,7 @@ function disableStartButton(playerChoice){
   })
   startBtn.addEventListener('click', (event)=>{
       event.preventDefault();
-      writeResults();
+      writeresults();
       disableGame();
   })
 
